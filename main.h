@@ -14,7 +14,7 @@
 
 #define PREFIX	"http://gdata.youtube.com/feeds/api/playlists/"
 #define SUFFIX	"?v=2"
-#define MAX_ID_LENGTH	32
+#define MAX_ID_LENGTH	64
 #define	PROGRAM	"youtube-dl.exe"
 
 int main();
