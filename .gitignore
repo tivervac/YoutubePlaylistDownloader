@@ -213,3 +213,8 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#Specific
+curl-7.28.1
+libxml
+libxml2-2.7.8
