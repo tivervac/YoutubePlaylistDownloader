@@ -1,22 +1,19 @@
 #include "main.h"
 
 int main(){
-	{
-		char *listID = (char*) malloc((MAX_ID_LENGTH + 1) * sizeof(char));
-		char *url = (char *) malloc(strlen(PREFIX) + 1 * sizeof(char));
-		strcpy(url, PREFIX);
-		printf("%s", "Enter the listID (64 chars max): ");
-		scanf("%64s", listID);
-		url = construct_url(url, listID);
-		send_playlist_request(url);
+	char *listID = (char*) malloc((MAX_ID_LENGTH + 1) * sizeof(char));
+	char *url = (char *) malloc(strlen(PREFIX) + 1 * sizeof(char));
+	strcpy(url, PREFIX);
+	printf("%s", "Enter the listID (64 chars max): ");
+	scanf("%64s", listID);
+	url = construct_url(url, listID);
+	send_playlist_request(url);
 
-		free(url);
-		url = NULL;
-		free(listID);
-		listID = NULL;
-		printf("All downloads completed!\n");
-	}
-	_CrtDumpMemoryLeaks();
+	free(url);
+	url = NULL;
+	free(listID);
+	listID = NULL;
+	printf("All downloads completed!\n");
 }
 
 char* construct_url(char *url, char listID[]){
